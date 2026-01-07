@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { useEditor, EditorContent } from "@tiptap/vue-3";
-import StarterKit from "@tiptap/starter-kit";
+import Text from "@tiptap/extension-text";
+import Document from "@tiptap/extension-document";
+import Paragraph from "@tiptap/extension-paragraph";
 
 const props = defineProps<{
   modelValue: string;
@@ -13,7 +15,7 @@ const emits = defineEmits<{
 
 const editor = useEditor({
   content: modelValue.value,
-  extensions: [StarterKit],
+  extensions: [Document, Paragraph, Text],
   onUpdate: () => {
     emits("update:modelValue", editor.value?.getText());
   },

@@ -10,6 +10,9 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@tiptap/extension-document": "^3.15.1",
+    "@tiptap/extension-paragraph": "^3.15.1",
+    "@tiptap/extension-text": "^3.15.1",
     "@tiptap/pm": "^3.15.1",
     "@tiptap/starter-kit": "^3.15.1",
     "@tiptap/vue-3": "^3.15.1",
